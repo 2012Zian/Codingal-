@@ -1,0 +1,42 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: aquamarine;
+    color:rgb(2, 51, 35) ;
+}
+h1{
+    color: darkslategray;
+}
+a{
+    color: darkorchid;
+    text-decoration: none;
+}
+a:hover{
+    color: goldenrod;
+}
+ul > li{
+    font-weight: bold;
+}
+h1+p{
+    background-color: rgb(178, 44, 115);
+    padding: 10px;
+    border-radius: 5px;
+}
+ul li:hover{
+    color: mediumpurple;
+}
+ul li:nth-child(3){
+    background-color: darkcyan;
+}
+p:not(:first-of-type){
+    text-decoration: underline;
+}
+ul li::before{
+    content:" * "
+}
+ul li::after{
+    content:" & "
+}
+p::first-letter{
+    font-size: 200%;
+    color: coral;
+}
