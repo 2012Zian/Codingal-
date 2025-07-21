@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="productvalue"></p>
+    <script>
+        var numbers=[1,62,8,3,48,9,6]
+        function myfunction(num){
+            return num * 10
+        }
+        var array1=numbers.map(myfunction)
+        document.getElementById("productvalue").innerHTML=array1
+    </script>
+</body>
+</html>
