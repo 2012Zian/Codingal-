@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var choice=prompt("Welcome to area calculator \n Please enter your choice \n 1.area of rectangle \n 2.area of triangle \n 3.Area of circle \n 4.Area of paralelogram")
+
+        if(choice=='1'){
+            var l= prompt("enter the lenght")
+            var w=prompt("enter the width")
+            var result=Number(l)*Number(w)
+            alert("area is "+result)
+        }
+        if (choice == '2') {
+                var h = prompt("enter the height")
+                var b = prompt("enter the base")
+                var result = Number(h) * Number(b) /2
+                alert("area is " + result)
+            }
+            if (choice == '3') {
+                    var r = prompt("enter the radius")
+                    var result = Number(r) * Number(r) *3.14
+                    alert("area is " + result)
+                }
+                if (choice == '4') {
+                        var h = prompt("enter the height")
+                        var cb = prompt("enter the corresponding base")
+                        var result = Number(h) * Number(cb) 
+                        alert("area is " + result)
+                    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
