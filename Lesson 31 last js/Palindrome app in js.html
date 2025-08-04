@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Palindrome app </h2>
+    <script>
+        function finder(mystring){
+            var input=mystring.replace(/[^A-Z0-9]/ig,"").toLowerCase()
+            var reverse=input.split("").reverse().join("")
+            if(input===reverse){
+                document.write("<div>"+mystring+" is a palindrome <div>")
+            }
+            else{
+                document.write("<div>"+mystring+" is not a palindrome")
+            }
+        }
+        finder("civic")
+    </script>
+</body>
+</html>
