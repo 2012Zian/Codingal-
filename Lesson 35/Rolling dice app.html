@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #dice{
+            font-size: 320px;
+        }
+        #dice:hover{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div> Click on the dice </div>
+    <div id="dice"onclick="stopstart()"></div>
+    <script>
+        var dice;
+        var dices = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;' ];
+        var stopped=true;
+        var t
+
+        function change(){
+            var random=Math.floor(Math.random()*6)
+            dice.innerHTML=dices[random];
+        }
+        function stopstart(){
+            if (stopped){
+                stopped=false;
+                t=setInterval(change,100)
+            }
+            else{
+                clearInterval(t);
+                stopped=true;
+            }
+        }
+            window.onload=function(){
+                dice=document.getElementById("dice")
+                stopstart()
+            
+        }
+    </script>
+</body>
+</html>
