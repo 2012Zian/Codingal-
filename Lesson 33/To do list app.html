@@ -7,27 +7,27 @@
 </head>
 <body>
     <h2>This is my shoping list</h2>
-    <form id="myform">
-        <input id="myinput" type="text">
+    <form id="calendar">
+        <input id="calendar" type="text">
         <button>Done</button>
     </form>
     <h3>To do list</h3>
-    <ul id="myitem"></ul>
+    <ul id="calendar"></ul>
     <script>
-        var myform=document.getElementById("myform");
-        var myinput=document.getElementById("myinput");
-        var myitem=document.getElementById("myitem");
+        var myform=document.getElementById("calendar");
+        var myinput=document.getElementById("calendar");
+        var myitem=document.getElementById("calendar");
         myform.addEventListener("submit",
                                 function(event){
                                     event.preventDefault()
                                     createItem(myinput.value)
                                 }
+            var calendar="Date"+date+"/"+month+"/"+year+day:''+today;
+            document.getElementById("calendar").innerText=calendar;
         )
         function createItem(inputitems){
             var items=`<li>${inputitems}<button onclick="deleteElement(this)">delete</button></li>`
-            myitem.insertAdjacentHTML("beforeend",items)
-            myinput.value=""
-            myinput.focus()
+
         }
         function deleteElement(elementtodelete){
             elementtodelete.parentElement.remove()
