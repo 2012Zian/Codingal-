@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Ducati </title>
+    <title> Hands on is for you! </title>
     <style>
         body{
             margin:0;
@@ -31,13 +31,38 @@
 
     </style>
 </head>
-<body>
-    <h1>DUCATI IS FOR YOU!</h1>
+<body><center>
+    <h1> Hands on security </h1>
     <div class="topnav">
     <a class="active" href="Home.html">HOME</a>
     <a href="Aboutus.html">ABOUT US</a>
     <a href="Gallery.html">GALLERY</a>
     <a href="Contactus.html">CONTACT US</a>
 </div>
+<section>
+    <img class="myslides"src="download.jpg"style="height:500px;">
+    <img class="myslides"src="download (1).jpg"style="height:500px;">
+    <img class="myslides"src="download (2).jpg"style="height:500px;">
+    <img class="myslides"src="download (3).jpg"style="height:500px;">
+    <img class="myslides"src="download (4).jpg"style="height:500px;">
+</section>
+</center>
+<script>
+    var index=0;
+    function carousel(){
+        var i
+        var x=document.getElementsByClassName("myslides")
+        for(i=0;i<x.length;i++){
+            x[i].style.display="none"
+        }
+        index++
+        if(index>x.length){
+            index=1
+        }
+        x[index-1].style.display="block"
+        setTimeout(carousel,2000)
+    }
+    carousel()
+</script>
 </body>
 </html>
